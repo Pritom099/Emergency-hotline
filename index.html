@@ -17,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-[#DFEFFF] h-[185vh] mx-auto">
+<body class="bg-[#DFEFFF] md:h-[185vh] mx-auto">
 
     <!-- header part -->
     <div class="flex justify-between bg-white">
@@ -27,21 +27,21 @@
         </div>
         <div class="flex items-center gap-6 mr-10">
             <div class="flex items-center justify-center bg-[#DFEFFF] p-1 gap-2 w-18 rounded-full">
-                <p>0</p>
+                <span class="font-bold" id="heart-ct">0</span>
                 <img class="h-[20px]" src="assets/heart.png" alt="">
             </div>
             <div class="flex items-center justify-center bg-[#DFEFFF] p-1 gap-2 w-18 rounded-full">
-                <p>100</p>
+                <span class="font-bold" id="coin-ct">100</span>
                 <img class="h-[20px]" src="assets/coin.png" alt="">
             </div>
-            <div class="flex items-center justify-center bg-[#00A63E] p-1 gap-2 w-18 rounded-full">
-                <p>2</p>
+            <div class="flex items-center justify-center bg-[#00A63E] p-1 gap-2 w-18 rounded-full text-white">
+                <span class="font-bold" id="copy-ct">0</span>
                 <p>copy</p>
             </div>
         </div>
     </div>
 
-    <!-- emergency part -->
+    <!-- banner section -->
     <div class="h-45 text-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]">
         <div class="p-2">
             <img class="h-18 mx-auto" src="assets/logo.png" alt="">
@@ -53,14 +53,14 @@
 
     <!-- helpline part -->
     <div class="flex gap-10 p-5">
-        <div class="grid grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
             <!-- national -->
             <div class="bg-white shadow-md rounded-2xl m-3 p-5 w-85 space-y-4">
                 <div class="flex justify-between">
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/emergency.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon"> 
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -77,7 +77,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="National Emergency" data-number="999" id="btn-nes"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-blue-100">
                         <img src="assets/police.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -105,7 +105,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Call the Police" data-number="999" id="btn-police"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/fire-service.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -133,7 +133,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Fire Service" data-number="999" id="btn-fire-service"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -144,7 +144,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/ambulance.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -161,7 +161,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Ambulance" data-number="1994-999999" id="btn-ambulance"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -172,7 +172,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/emergency.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -189,7 +189,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Women & Child Help" data-number="109" id="btn-womens"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -200,7 +200,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/emergency.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -217,7 +217,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Anti Corruption Commission" data-number="106" id="btn-anti"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -228,7 +228,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/emergency.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -245,7 +245,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Electricity Office" data-number="16216" id="btn-electricity"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -256,7 +256,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/emergency.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -273,7 +273,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Brac Centre" data-number="16445" id="btn-brac"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -284,7 +284,7 @@
                     <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-red-100">
                         <img src="assets/emergency.png" class="w-6 h-6" alt="">
                     </div>
-                    <button>
+                    <button class="hover:text-red-500 heart-icon">
                         <i class="fa-regular fa-heart"></i>
                     </button>
                 </div>
@@ -301,7 +301,7 @@
                         class="flex-1 justify-center items-center border border-gray-300 bg-gray-100 py-2 rounded-xl"><i
                             class="fa-regular fa-copy mr-2"></i>Copy</button>
                     <button
-                        class="flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl"><i
+                        class="btn-call flex-1 justify-center items-center border border-gray-300 bg-green-700 text-white py-2 rounded-xl" data-service="Bangladesh Railway" data-number="163" id="btn-railway"><i
                             class="fa-solid fa-phone mr-2"></i>Call</button>
                 </div>
             </div>
@@ -318,10 +318,24 @@
                     <button class="flex items-center justify-center w-20 text-white bg-green-700 py-1 px-2 rounded-full">Clear</button>
                 </div>
             </div>
+            <div class="bg-[#DFEFFF] flex p-4 rounded-2xl mx-3 gap-12 items-center">
+                <div>
+                    <h1 class="font-semibold text-sm">Fire Service Number</h1>
+                    <p class="text-gray-500 text-sm">999</p>
+                </div>
+                <div>
+                    <p class="text-sm">11:36:58 AM</p>
+                </div>
+            </div>
 
         </div>
     </div>
 
+
+
+    <script src="script.js">
+
+    </script>
 </body>
 
 </html>
