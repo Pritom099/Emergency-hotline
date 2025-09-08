@@ -28,7 +28,7 @@ const coinCountElement = document.getElementById('coin-ct');
             addHistoryEntry(serviceName,emergencyNumber);
         }
         else{
-            alert('you do not have sufficient coins, you need at least 20 coins');
+            alert('❌ you do not have sufficient coins, you need at least 20 coins.');
         }
     })
  } )
@@ -70,6 +70,11 @@ const copyCountElement = document.getElementById('copy-ct');
 
 for(const copy of copyButtons){
     copy.addEventListener('click', function(){
+
+        const phoneNumber = copy.getAttribute('data-copy');
+        alert(`The number ${phoneNumber} has been copied!`)
+
+
         let currentCopyCount = parseInt(copyCountElement.innerText);
         currentCopyCount++;
         copyCountElement.innerText = currentCopyCount;
